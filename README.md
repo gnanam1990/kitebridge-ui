@@ -2,6 +2,13 @@
 
 A Kite-themed UI wrapper for bringing USDC.e to Kite Mainnet. **PREVIEW** — bridge protocol pending Foundation confirmation.
 
+## Deployment
+
+- **Production:** https://kitebridge-ui.vercel.app
+- **Host:** Vercel (`kitebridge-ui`)
+- **Status:** production build verified; preview UI only, bridge buttons remain disabled until an audited route is configured
+- **Last verified:** 2026-05-23
+
 ## What this is (and isn't)
 
 **Is:**
