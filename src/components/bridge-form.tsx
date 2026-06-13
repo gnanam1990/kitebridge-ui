@@ -21,14 +21,14 @@ export function BridgeForm() {
   const route = useMemo(() => findRoute(from, to), [from, to]);
 
   function swap() {
+    // Only swap when a valid reverse route exists. Otherwise leave the form
+    // untouched: forcing the swap would set `from` to a chain that has no
+    // outgoing routes (e.g. Kite), which is not a valid source and leaves the
+    // "From" picker showing a value that isn't in its options.
     const reverse = findRoute(to, from);
     if (reverse) {
       setFrom(to);
       setTo(from);
-    } else {
-      const dest = availableDestinations(to)[0];
-      setFrom(to);
-      setTo(dest ?? from);
     }
   }
 
